@@ -18,11 +18,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iN5-aj-l4H">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iN5-aj-l4H">
                                 <rect key="frame" x="157" y="205" width="100" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="1g8-2X-h0e"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="GqQ-Fg-Kzj"/>
+                                    <constraint firstAttribute="height" constant="40" id="nYq-FM-MHk"/>
+                                    <constraint firstAttribute="width" constant="100" id="wCi-sQ-7yF"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                             </button>
@@ -35,10 +35,11 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="iN5-aj-l4H" firstAttribute="top" secondItem="RBq-V9-2h3" secondAttribute="bottom" constant="40" id="9bx-Xm-ufs"/>
                             <constraint firstAttribute="trailingMargin" secondItem="RBq-V9-2h3" secondAttribute="trailing" constant="20" id="EK9-aK-zOr"/>
+                            <constraint firstItem="iN5-aj-l4H" firstAttribute="top" secondItem="RBq-V9-2h3" secondAttribute="bottom" constant="40" id="azy-Yk-NQJ"/>
                             <constraint firstItem="RBq-V9-2h3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="haW-Kd-Zuu"/>
                             <constraint firstItem="RBq-V9-2h3" firstAttribute="top" secondItem="peg-Me-jMc" secondAttribute="bottom" constant="100" id="jZl-3t-sBF"/>
+                            <constraint firstItem="iN5-aj-l4H" firstAttribute="centerX" secondItem="RBq-V9-2h3" secondAttribute="centerX" id="xh4-fq-jPa"/>
                         </constraints>
                     </view>
                 </viewController>
