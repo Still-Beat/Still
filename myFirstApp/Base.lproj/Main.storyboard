@@ -19,12 +19,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iN5-aj-l4H">
-                                <rect key="frame" x="157" y="205" width="100" height="40"/>
+                                <rect key="frame" x="132" y="205" width="150" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="nYq-FM-MHk"/>
-                                    <constraint firstAttribute="width" constant="100" id="wCi-sQ-7yF"/>
+                                    <constraint firstAttribute="width" constant="150" id="wCi-sQ-7yF"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="MyButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TIV-x8-cUq"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RBq-V9-2h3">
                                 <rect key="frame" x="40" y="144" width="334" height="21"/>
@@ -32,16 +35,51 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZWa-lt-WUa">
+                                <rect key="frame" x="132" y="285" width="150" height="40"/>
+                                <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="2k2-V7-5kI"/>
+                                    <constraint firstAttribute="height" constant="40" id="pan-6p-tXg"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="ButtonResetAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o9B-bv-m8H"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h1K-Sq-CnR">
+                                <rect key="frame" x="132" y="365" width="150" height="40"/>
+                                <color key="backgroundColor" red="0.67349874973297119" green="0.91795802116394043" blue="0.23862701654434204" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="atP-AO-7cB"/>
+                                    <constraint firstAttribute="height" constant="40" id="i97-T2-1Se"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="ButtonAdditionAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GIQ-T7-ClZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="h1K-Sq-CnR" firstAttribute="top" secondItem="ZWa-lt-WUa" secondAttribute="bottom" constant="40" id="0iC-lf-yJM"/>
+                            <constraint firstItem="ZWa-lt-WUa" firstAttribute="centerX" secondItem="iN5-aj-l4H" secondAttribute="centerX" id="7br-24-lnw"/>
                             <constraint firstAttribute="trailingMargin" secondItem="RBq-V9-2h3" secondAttribute="trailing" constant="20" id="EK9-aK-zOr"/>
                             <constraint firstItem="iN5-aj-l4H" firstAttribute="top" secondItem="RBq-V9-2h3" secondAttribute="bottom" constant="40" id="azy-Yk-NQJ"/>
+                            <constraint firstItem="ZWa-lt-WUa" firstAttribute="top" secondItem="iN5-aj-l4H" secondAttribute="bottom" constant="40" id="gKB-QN-oeR"/>
                             <constraint firstItem="RBq-V9-2h3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="haW-Kd-Zuu"/>
                             <constraint firstItem="RBq-V9-2h3" firstAttribute="top" secondItem="peg-Me-jMc" secondAttribute="bottom" constant="100" id="jZl-3t-sBF"/>
+                            <constraint firstItem="ZWa-lt-WUa" firstAttribute="top" secondItem="iN5-aj-l4H" secondAttribute="bottom" constant="40" id="tqC-BV-2zh"/>
                             <constraint firstItem="iN5-aj-l4H" firstAttribute="centerX" secondItem="RBq-V9-2h3" secondAttribute="centerX" id="xh4-fq-jPa"/>
+                            <constraint firstItem="h1K-Sq-CnR" firstAttribute="centerX" secondItem="ZWa-lt-WUa" secondAttribute="centerX" id="yA1-2x-vXi"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ButtonAddition" destination="h1K-Sq-CnR" id="vqx-0t-NGg"/>
+                        <outlet property="ButtonReset" destination="ZWa-lt-WUa" id="lr5-69-joA"/>
+                        <outlet property="MyButton" destination="iN5-aj-l4H" id="eOp-4f-uX6"/>
+                        <outlet property="myLabel" destination="RBq-V9-2h3" id="fzF-IG-fhj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
