@@ -11,25 +11,22 @@ protocol FirstViewModelDelegate {
     func CountBechanges()
 }
 class FirstViewModel {
+  
     
     var count = 0
     var delegate: FirstViewModelDelegate?
-    
     func plusOne() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-            self.count += 1
-            self.delegate?.CountBechanges() }
+        self.count += 1
+        self.delegate?.CountBechanges() }
     }
-    
     func minusOne() {
         if count > 0 {
             count = count - 1}
         delegate?.CountBechanges()
     }
-    
     func reset() {
-        count = 0
+      count = 0
         delegate?.CountBechanges()
     }
-    
 }

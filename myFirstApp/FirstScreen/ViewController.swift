@@ -10,55 +10,18 @@ import UIKit
 
 class ViewController: UIViewController, FirstViewModelDelegate {
     func CountBechanges() {
-        myLabel.text = String(model.count)
+        MyLabel.text = String(model.count)
     }
     
-    @IBOutlet weak var myLabel: UILabel!
-    @IBOutlet weak var myButton: UIButton!
-    @IBOutlet weak var buttonReset: UIButton!
-    @IBOutlet weak var buttonAddition: UIButton!
-    @IBOutlet weak var buttonNextPage: UIButton!
     
+    
+    @IBOutlet weak var MyLabel: UILabel!
+    @IBOutlet weak var MyButton: UIButton!
+    @IBOutlet weak var ButtonReset: UIButton!
+    @IBOutlet weak var ButtonAddition: UIButton!
+    @IBOutlet weak var ButtonNextPage: UIButton!
+
     let model = FirstViewModel()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .white
-        model.delegate = self
-        myLabel.text = String(model.count)
-        configureUI()
-    }
-    
-    func configureUI(){
-        
-        myLabel.textColor = .black
-        myLabel.font = .systemFont(ofSize: 30)
-        
-        myButton.setTitle("+", for: .normal)
-        myButton.setTitleColor(.black, for: .normal)
-        myButton.titleLabel?.font = .systemFont(ofSize: 30)
-        myButton.layer.cornerRadius = 20
-        myButton.backgroundColor = UIColor(red: 88/255, green: 195/255, blue: 237/255, alpha: 1)
-        
-        buttonReset.setTitle("Reset", for: .normal)
-        buttonReset.setTitleColor(.black, for: .normal)
-        buttonReset.layer.cornerRadius = 20
-        buttonReset.backgroundColor = UIColor(red: 88/255, green: 195/255, blue: 237/255, alpha: 1)
-        buttonReset.titleLabel?.font = .systemFont(ofSize: 30)
-        
-        buttonAddition.setTitle("-", for: .normal)
-        buttonAddition.setTitleColor(.black, for: .normal)
-        buttonAddition.layer.cornerRadius = 20
-        buttonAddition.backgroundColor = UIColor(red: 88/255, green: 195/255, blue: 237/255, alpha: 1)
-        buttonAddition.titleLabel?.font = .systemFont(ofSize: 30)
-        
-        buttonNextPage.setTitle("Go to next VC", for: .normal)
-        buttonNextPage.setTitleColor(.black, for: .normal)
-        buttonNextPage.backgroundColor = UIColor(red: 88/255, green: 195/255, blue: 237/255, alpha: 1)
-        buttonNextPage.layer.cornerRadius = 20
-        buttonNextPage.titleLabel?.font = .systemFont(ofSize: 30)
-        
-    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "GoToNextVc" {
@@ -68,15 +31,50 @@ class ViewController: UIViewController, FirstViewModelDelegate {
         }
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .white
+        model.delegate = self
+        MyLabel.text = String(model.count)
+        configureUI()
+    }
+    func configureUI(){
+        
+        MyLabel.textColor = .black
+        MyLabel.font = .systemFont(ofSize: 30)
+        MyButton.setTitle("+", for: .normal)
+        MyButton.setTitleColor(.black, for: .normal)
+        MyButton.titleLabel?.font = .systemFont(ofSize: 30)
+        MyButton.layer.cornerRadius = 20
+        MyButton.backgroundColor = UIColor(red: 88/255, green: 195/255, blue: 237/255, alpha: 1)
+        ButtonReset.setTitle("Reset", for: .normal)
+        ButtonReset.setTitleColor(.black, for: .normal)
+        ButtonReset.layer.cornerRadius = 20
+        ButtonReset.backgroundColor = UIColor(red: 88/255, green: 195/255, blue: 237/255, alpha: 1)
+        ButtonReset.titleLabel?.font = .systemFont(ofSize: 30)
+        ButtonAddition.setTitle("-", for: .normal)
+        ButtonAddition.setTitleColor(.black, for: .normal)
+        ButtonAddition.layer.cornerRadius = 20
+        ButtonAddition.backgroundColor = UIColor(red: 88/255, green: 195/255, blue: 237/255, alpha: 1)
+        ButtonAddition.titleLabel?.font = .systemFont(ofSize: 30)
+        ButtonNextPage.setTitle("Go to next VC", for: .normal)
+    ButtonNextPage.setTitleColor(.black, for: .normal)
+        ButtonNextPage.backgroundColor = UIColor(red: 88/255, green: 195/255, blue: 237/255, alpha: 1)
+        ButtonNextPage.layer.cornerRadius = 20
+        ButtonNextPage.titleLabel?.font = .systemFont(ofSize: 30)
+        
+        // Do any additional setup after loading the view.
+    }
+
     @IBAction func MyButtonAction(_ sender: Any) {
         model.plusOne()
     }
-    
     @IBAction func ButtonResetAction(_ sender: Any) {
         model.reset()
     }
     
     @IBAction func ButtonAdditionAction(_ sender: Any) {
         model.minusOne()
+        
     }
 }
