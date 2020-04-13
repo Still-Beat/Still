@@ -172,38 +172,12 @@
                                 <rect key="frame" x="20" y="96" width="374" height="766"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-<<<<<<< HEAD
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellReuse" id="AQt-eJ-1Sa" customClass="CustomTableViewCell" customModule="myFirstApp">
-                                        <rect key="frame" x="0.0" y="28" width="374" height="21.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AQt-eJ-1Sa" id="N9H-Vu-aIY">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="21.5"/>
-=======
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellReuse" id="AQt-eJ-1Sa">
                                         <rect key="frame" x="0.0" y="28" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AQt-eJ-1Sa" id="N9H-Vu-aIY">
-<<<<<<< HEAD
-                                            <rect key="frame" x="0.0" y="0.0" width="560" height="43.5"/>
->>>>>>> 003ea3ca1997b86118c0ad1c1d0e11af4edde91a
-=======
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
->>>>>>> 7b94d49ebc8d3e3ed2037c9df8f0da6e8c935273
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ILQ-D7-CCL">
-                                                    <rect key="frame" x="0.0" y="0.0" width="42" height="21.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="ILQ-D7-CCL" firstAttribute="leading" secondItem="N9H-Vu-aIY" secondAttribute="leading" id="kIu-iA-LEU"/>
-                                                <constraint firstAttribute="bottom" secondItem="ILQ-D7-CCL" secondAttribute="bottom" id="mfJ-S5-MxP"/>
-                                                <constraint firstItem="ILQ-D7-CCL" firstAttribute="top" secondItem="N9H-Vu-aIY" secondAttribute="top" id="ng7-pQ-S1S"/>
-                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ILQ-D7-CCL" secondAttribute="trailing" id="oLm-wn-cwf"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
