@@ -159,7 +159,7 @@
         <!--Next View Controller-->
         <scene sceneID="mf8-pf-oCV">
             <objects>
-                <viewController id="MNo-D8-S9g" customClass="NextViewController" sceneMemberID="viewController">
+                <viewController id="MNo-D8-S9g" customClass="NextViewController" customModule="myFirstApp" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Jr9-bf-4Er"/>
                         <viewControllerLayoutGuide type="bottom" id="4g8-kk-q6I"/>
