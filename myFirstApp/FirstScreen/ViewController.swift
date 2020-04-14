@@ -42,21 +42,29 @@ class ViewController: UIViewController, FirstViewModelDelegate {
         
         MyLabel.textColor = .black
         MyLabel.font = .systemFont(ofSize: 30)
+        
+        
         MyButton.setTitle("+", for: .normal)
         MyButton.setTitleColor(.black, for: .normal)
         MyButton.titleLabel?.font = .systemFont(ofSize: 30)
         MyButton.layer.cornerRadius = 20
         MyButton.backgroundColor = UIColor(red: 88/255, green: 195/255, blue: 237/255, alpha: 1)
+        
+        
         ButtonReset.setTitle("Reset", for: .normal)
         ButtonReset.setTitleColor(.black, for: .normal)
         ButtonReset.layer.cornerRadius = 20
         ButtonReset.backgroundColor = UIColor(red: 88/255, green: 195/255, blue: 237/255, alpha: 1)
         ButtonReset.titleLabel?.font = .systemFont(ofSize: 30)
+        
+        
         ButtonAddition.setTitle("-", for: .normal)
         ButtonAddition.setTitleColor(.black, for: .normal)
         ButtonAddition.layer.cornerRadius = 20
         ButtonAddition.backgroundColor = UIColor(red: 88/255, green: 195/255, blue: 237/255, alpha: 1)
         ButtonAddition.titleLabel?.font = .systemFont(ofSize: 30)
+        
+        
         ButtonNextPage.setTitle("Go to next VC", for: .normal)
     ButtonNextPage.setTitleColor(.black, for: .normal)
         ButtonNextPage.backgroundColor = UIColor(red: 88/255, green: 195/255, blue: 237/255, alpha: 1)

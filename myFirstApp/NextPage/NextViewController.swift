@@ -19,7 +19,7 @@ UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        for i in 0...1000 {
+        for i in 0...100 {
             data.append("\(i)")
         }
         
@@ -47,10 +47,10 @@ UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         let text = data[indexPath.row]
         if indexPath.row % 2 == 0 {
-        cell.contentView.backgroundColor = .blue
+        cell.backgroundColor = UIColor (red: 88/255, green: 195/255, blue: 237/255, alpha: 1)
         }
         else {
-            cell.contentView.backgroundColor = .lightGray
+            cell.backgroundColor = .lightGray
         }
         
         cell.label.text = text
