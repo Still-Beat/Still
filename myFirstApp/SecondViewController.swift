@@ -19,6 +19,7 @@ class SecondViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .white
         
         Label2.text = String(сount)
         Label2.font = .systemFont(ofSize: 40)

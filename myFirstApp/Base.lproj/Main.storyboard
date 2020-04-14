@@ -164,7 +164,7 @@
                         <viewControllerLayoutGuide type="top" id="Jr9-bf-4Er"/>
                         <viewControllerLayoutGuide type="bottom" id="4g8-kk-q6I"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="vwv-0t-wE3">
+                    <view key="view" contentMode="scaleToFill" id="vwv-0t-wE3" customClass="CustomTableViewCell" customModule="myFirstApp" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -172,13 +172,32 @@
                                 <rect key="frame" x="20" y="96" width="374" height="766"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellReuse" id="AQt-eJ-1Sa">
-                                        <rect key="frame" x="0.0" y="28" width="374" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellReuse" id="AQt-eJ-1Sa" customClass="CustomTableViewCell" customModule="myFirstApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="374" height="21"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AQt-eJ-1Sa" id="N9H-Vu-aIY">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AQt-eJ-1Sa" id="N9H-Vu-aIY" customClass="CustomTableViewCell" customModule="myFirstApp" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="21"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="idU-LD-JKx">
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="idU-LD-JKx" firstAttribute="top" secondItem="N9H-Vu-aIY" secondAttribute="top" id="0fC-jU-7yb"/>
+                                                <constraint firstItem="idU-LD-JKx" firstAttribute="leading" secondItem="N9H-Vu-aIY" secondAttribute="leading" id="WQl-fE-0cW"/>
+                                                <constraint firstAttribute="trailing" secondItem="idU-LD-JKx" secondAttribute="trailing" id="jJe-GF-StR"/>
+                                                <constraint firstAttribute="bottom" secondItem="idU-LD-JKx" secondAttribute="bottom" id="o2e-7I-Bw3"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="contentView" destination="N9H-Vu-aIY" id="viM-A6-9ML"/>
+                                            <outlet property="label" destination="idU-LD-JKx" id="GIK-Rd-q0u"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -190,6 +209,9 @@
                             <constraint firstAttribute="trailingMargin" secondItem="QNV-Ho-Hkb" secondAttribute="trailing" id="pEp-FT-ciN"/>
                             <constraint firstItem="QNV-Ho-Hkb" firstAttribute="top" secondItem="Jr9-bf-4Er" secondAttribute="bottom" constant="8" symbolic="YES" id="wgT-61-sq4"/>
                         </constraints>
+                        <connections>
+                            <outlet property="tableView" destination="QNV-Ho-Hkb" id="W6t-wm-8ab"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="06t-rR-7bQ"/>
                     <connections>

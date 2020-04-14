@@ -10,7 +10,7 @@
 import UIKit
 
 class NextViewController:
-UIViewController, UITableViewDataSource {
+UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     private var data: [String] = []
@@ -22,7 +22,18 @@ UIViewController, UITableViewDataSource {
         for i in 0...1000 {
             data.append("\(i)")
         }
+        
         tableView.dataSource = self
+        tableView.delegate = self
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let alertController = UIAlertController (title: "Alert ", message: "You choose row \(indexPath.row)", preferredStyle: .alert)
+        let alertAction =  UIAlertAction (title: "Ok", style:  .cancel, handler: nil)
+        alertController.addAction(alertAction)
+         present(alertController, animated: true, completion: nil)
+        
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -32,10 +43,17 @@ UIViewController, UITableViewDataSource {
         return data.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cellReuse")!
-        let text = data [indexPath.row]
-        cell.textLabel?.text = text 
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellReuse")! as! CustomTableViewCell
+        
+        let text = data[indexPath.row]
+        if indexPath.row % 2 == 0 {
+        cell.contentView.backgroundColor = .blue
+        }
+        else {
+            cell.contentView.backgroundColor = .lightGray
+        }
+        
+        cell.label.text = text
          return cell
 }
 }
-
