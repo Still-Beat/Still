@@ -20,6 +20,10 @@
 		4D49CA692449EFE0004A7E1E /* CovidCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D49CA672449EFE0004A7E1E /* CovidCell.xib */; };
 		4D49CA6C244A0783004A7E1E /* CovidCellTotal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D49CA6A244A0783004A7E1E /* CovidCellTotal.swift */; };
 		4D49CA6D244A0783004A7E1E /* CovidCellTotal.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D49CA6B244A0783004A7E1E /* CovidCellTotal.xib */; };
+		7D50FD72244DD68200CF00AC /* Covid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D50FD71244DD68200CF00AC /* Covid.swift */; };
+		7D50FD74244DD68E00CF00AC /* Death.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D50FD73244DD68E00CF00AC /* Death.swift */; };
+		7D50FD76244DD69700CF00AC /* Cases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D50FD75244DD69700CF00AC /* Cases.swift */; };
+		7D50FD78244DD9B000CF00AC /*  Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D50FD77244DD9B000CF00AC /*  Response.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +43,10 @@
 		4D49CA672449EFE0004A7E1E /* CovidCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CovidCell.xib; sourceTree = "<group>"; };
 		4D49CA6A244A0783004A7E1E /* CovidCellTotal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidCellTotal.swift; sourceTree = "<group>"; };
 		4D49CA6B244A0783004A7E1E /* CovidCellTotal.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CovidCellTotal.xib; sourceTree = "<group>"; };
+		7D50FD71244DD68200CF00AC /* Covid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Covid.swift; sourceTree = "<group>"; };
+		7D50FD73244DD68E00CF00AC /* Death.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Death.swift; sourceTree = "<group>"; };
+		7D50FD75244DD69700CF00AC /* Cases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cases.swift; sourceTree = "<group>"; };
+		7D50FD77244DD9B000CF00AC /*  Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " Response.swift"; sourceTree = "<group>"; };
 		FF76C579942E985869C6457F /* Pods_myFirstApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_myFirstApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -108,6 +116,7 @@
 		4D49CA5D2444D62A004A7E1E /* NextPage */ = {
 			isa = PBXGroup;
 			children = (
+				7D50FD70244DD66C00CF00AC /* Models */,
 				4D49CA592444CB81004A7E1E /* NextViewController.swift */,
 				4D49CA662449EFE0004A7E1E /* CovidCell.swift */,
 				4D49CA672449EFE0004A7E1E /* CovidCell.xib */,
@@ -115,6 +124,17 @@
 				4D49CA6B244A0783004A7E1E /* CovidCellTotal.xib */,
 			);
 			path = NextPage;
+			sourceTree = "<group>";
+		};
+		7D50FD70244DD66C00CF00AC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7D50FD71244DD68200CF00AC /* Covid.swift */,
+				7D50FD73244DD68E00CF00AC /* Death.swift */,
+				7D50FD75244DD69700CF00AC /* Cases.swift */,
+				7D50FD77244DD9B000CF00AC /*  Response.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		E1C0C906EED49CE18717F788 /* Frameworks */ = {
@@ -245,10 +265,14 @@
 				4D49CA5A2444CB81004A7E1E /* NextViewController.swift in Sources */,
 				4D49CA30243F56E5004A7E1E /* SecondViewController.swift in Sources */,
 				4D49CA0E2435E20F004A7E1E /* ViewController.swift in Sources */,
+				7D50FD72244DD68200CF00AC /* Covid.swift in Sources */,
 				4D49CA0A2435E20F004A7E1E /* AppDelegate.swift in Sources */,
 				4D49CA33244448C1004A7E1E /* FirstViewModel.swift in Sources */,
 				4D49CA682449EFE0004A7E1E /* CovidCell.swift in Sources */,
+				7D50FD76244DD69700CF00AC /* Cases.swift in Sources */,
+				7D50FD74244DD68E00CF00AC /* Death.swift in Sources */,
 				4D49CA6C244A0783004A7E1E /* CovidCellTotal.swift in Sources */,
+				7D50FD78244DD9B000CF00AC /*  Response.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
