@@ -122,13 +122,18 @@ UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     var country: String
     var day: String
-    var deaths : Deaths
+    var totaldeaths : Deaths
     var recovered : Cases
+    var cases : String
+    var deaths : String
         
         
         enum CodingKeys: String, CodingKey {
             case country
             case day
+            case cases
+            case deaths
+
 
         }
         
@@ -136,6 +141,9 @@ UIViewController, UITableViewDataSource, UITableViewDelegate {
             var container = encoder.container(keyedBy: CodingKeys.self)
             try container.encode(country, forKey: .country)
             try container.encode(day,forKey: .day)
+            try container.encode(cases, forKey: .cases)
+            try container.encode(deaths, forKey: .deaths)
+
             
         }
         
@@ -144,6 +152,8 @@ UIViewController, UITableViewDataSource, UITableViewDelegate {
             let container = try decoder.container(keyedBy: CodingKeys.self)
             country = try container.decode(String.self, forKey: .country)
             day = try container.decode(String.self, forKey: .day)
+            cases = try container.decode(String.self, forKey: .cases)
+            deaths = try container.decode(String.self, forKey: .deaths)
 
         
         }
