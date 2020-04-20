@@ -9,7 +9,12 @@
 import UIKit
 
 class CovidCellTotal: UITableViewCell {
+    
+    
     @IBOutlet weak var labelOne: UILabel!
+    @IBOutlet weak var labelTwo: UILabel!
+    
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

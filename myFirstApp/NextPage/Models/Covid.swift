@@ -12,7 +12,7 @@ struct Covid: Codable {
     
     var country: String
     var day: String
-    
+    var tests: Tests
     var deaths : Deaths
     var cases : Cases
     
@@ -22,6 +22,7 @@ struct Covid: Codable {
         case day
         case deaths
         case cases
+        case tests
     }
     
     func encode(to encoder: Encoder) throws {
@@ -30,6 +31,7 @@ struct Covid: Codable {
         try container.encode(day,forKey: .day)
         try container.encode(cases, forKey: .cases)
         try container.encode(deaths, forKey: .deaths)
+        try container.encode(tests, forKey: .tests)
     }
     
     
@@ -39,6 +41,7 @@ struct Covid: Codable {
         day = try container.decode(String.self, forKey: .day)
         cases = try container.decode(Cases.self, forKey: .cases)
         deaths = try container.decode(Deaths.self, forKey: .deaths)
+        tests = try container.decode(Tests.self, forKey: .tests)
         
         
     }

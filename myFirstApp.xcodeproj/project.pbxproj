@@ -20,6 +20,7 @@
 		4D49CA692449EFE0004A7E1E /* CovidCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D49CA672449EFE0004A7E1E /* CovidCell.xib */; };
 		4D49CA6C244A0783004A7E1E /* CovidCellTotal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D49CA6A244A0783004A7E1E /* CovidCellTotal.swift */; };
 		4D49CA6D244A0783004A7E1E /* CovidCellTotal.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D49CA6B244A0783004A7E1E /* CovidCellTotal.xib */; };
+		4D49CA6F244DF831004A7E1E /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D49CA6E244DF831004A7E1E /* Tests.swift */; };
 		7D50FD72244DD68200CF00AC /* Covid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D50FD71244DD68200CF00AC /* Covid.swift */; };
 		7D50FD74244DD68E00CF00AC /* Death.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D50FD73244DD68E00CF00AC /* Death.swift */; };
 		7D50FD76244DD69700CF00AC /* Cases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D50FD75244DD69700CF00AC /* Cases.swift */; };
@@ -43,6 +44,7 @@
 		4D49CA672449EFE0004A7E1E /* CovidCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CovidCell.xib; sourceTree = "<group>"; };
 		4D49CA6A244A0783004A7E1E /* CovidCellTotal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidCellTotal.swift; sourceTree = "<group>"; };
 		4D49CA6B244A0783004A7E1E /* CovidCellTotal.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CovidCellTotal.xib; sourceTree = "<group>"; };
+		4D49CA6E244DF831004A7E1E /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		7D50FD71244DD68200CF00AC /* Covid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Covid.swift; sourceTree = "<group>"; };
 		7D50FD73244DD68E00CF00AC /* Death.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Death.swift; sourceTree = "<group>"; };
 		7D50FD75244DD69700CF00AC /* Cases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cases.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				7D50FD71244DD68200CF00AC /* Covid.swift */,
+				4D49CA6E244DF831004A7E1E /* Tests.swift */,
 				7D50FD73244DD68E00CF00AC /* Death.swift */,
 				7D50FD75244DD69700CF00AC /* Cases.swift */,
 				7D50FD77244DD9B000CF00AC /*  Response.swift */,
@@ -263,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D49CA5A2444CB81004A7E1E /* NextViewController.swift in Sources */,
+				4D49CA6F244DF831004A7E1E /* Tests.swift in Sources */,
 				4D49CA30243F56E5004A7E1E /* SecondViewController.swift in Sources */,
 				4D49CA0E2435E20F004A7E1E /* ViewController.swift in Sources */,
 				7D50FD72244DD68200CF00AC /* Covid.swift in Sources */,

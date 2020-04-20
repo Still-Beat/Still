@@ -108,6 +108,7 @@ UIViewController, UITableViewDataSource, UITableViewDelegate {
             let cell = tableView.dequeueReusableCell(withIdentifier: "covidTotal")! as! CovidCellTotal
             
             cell.labelOne.text = String(covids[indexPath.row].cases.recovered)
+            cell.labelTwo.text = String(covids[indexPath.row].test.total)
             return cell
         }
         
