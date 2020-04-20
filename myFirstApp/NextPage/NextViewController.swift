@@ -104,7 +104,7 @@ UIViewController, UITableViewDataSource, UITableViewDelegate {
             
             cell.labelOne.text = covids[indexPath.row].country
             cell.imageTwo.text = String(covids[indexPath.row].deaths)
-            cell.myImageView.image = #imageLiteral(resourceName: "41766-kosmos-lyuk_skajuoker-robot-shturmovik-star_wars_battlefront_ii-360x780")
+            cell.myImageView.image = UIImage(ciImage: .blue)
             return cell
         }
         else {
@@ -118,30 +118,97 @@ UIViewController, UITableViewDataSource, UITableViewDelegate {
     
 }
 
-struct Covid {
+    struct Covid: Codable {
 
     var country: String
     var day: String
-    var deaths : Int
-    var recovered : Int
-    
+    var deaths : Deaths
+    var recovered : Cases
+        
+        
+        enum CodingKeys: String, CodingKey {
+            case country
+            case day
 
-    init?(json: [String: Any]) {
-        guard
-            let country = json["country"] as? String,
-            let day = json["day"] as? String,
-            let recovered = json["recovered"] as? Int,
-            let deaths = json["deaths"] as? [String: Any],
-            let total = deaths["total"] as? Int
-            
-        else {
-            return nil
         }
-        self.country = country
-        self.day = day
-        self.deaths = total
-        self.recovered = recovered
+        
+        func encode(to encoder: Encoder) throws {
+            var container = encoder.container(keyedBy: CodingKeys.self)
+            try container.encode(country, forKey: .country)
+            try container.encode(day,forKey: .day)
+            
+        }
+        
+        
+        init(from decoder: Decoder) throws {
+            let container = try decoder.container(keyedBy: CodingKeys.self)
+            country = try container.decode(String.self, forKey: .country)
+            day = try container.decode(String.self, forKey: .day)
+
+        
+        }
     }
+    
+    struct Deaths {
+        
+        
+        var deaths : Int
+        
+        
+        enum CodingKeys: String, CodingKey {
+            case deaths
+        }
+        
+        
+        func encode(to encoder: Encoder) throws {
+            var container = encoder.container(keyedBy: CodingKeys.self)
+            try container.encode(deaths, forKey: .deaths)
+        }
+        
+        init(from decoder: Decoder) throws {
+            let container = try decoder.container(keyedBy: CodingKeys.self)
+            deaths = try container.decode(Int.self, forKey: .deaths)
+        }
+    }
+    
+    
+    struct Cases {
+        var recovered : Int
+        
+        enum CodingKeys: String, CodingKey {
+            case recovered
+        }
+        
+        func encode(to encoder: Encoder) throws {
+            var container = encoder.container(keyedBy: CodingKeys.self)
+            try container.encode(recovered, forKey: .recovered)
+            
+        }
+        
+        init(from decoder: Decoder) throws {
+            let container = try decoder.container(keyedBy: CodingKeys.self)
+            recovered = try container.decode(Int.self, forKey: .recovered)
+
+        }
+    }
+    
+//    init?(json: [String: Any]) {
+//      guard
+//          let country = json["country"] as? String,
+//             let day = json["day"] as? String,
+//             let cases = json["cases"] as? [String: Any],
+//             let deaths = json["deaths"] as? [String: Any],
+//             let total = deaths["total"] as? Int,
+//             let recovered = cases["recovered"] as? Int
+//         else {
+//             return nil
+//         }
+//         self.country = country
+//         self.day = day
+//         self.deaths = total
+//         self.recovered = recovered
+    
+ 
 
     static func getArray(from jsonArray: Any) -> [Covid]? {
 
